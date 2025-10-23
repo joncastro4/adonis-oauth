@@ -12,7 +12,7 @@ export default class AuthController {
                     table: "users",
                     column: "email"
                 }),
-                password: Vine.string().confirmed()
+                password: Vine.string()
             })
         )
 
