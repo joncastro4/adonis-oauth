@@ -20,5 +20,5 @@ router.get('/', async () => {
 router.group(() => {
   router.post("/usuarios", [AuthController, 'signUp'])
   router.post("/ingresar", [AuthController, 'logIn'])
-  router.get("/salir", [AuthController, 'logout']).use(middleware.auth())
+  router.post("/salir", [AuthController, 'logout']).use(middleware.auth())
 }).prefix("/api/v1")
