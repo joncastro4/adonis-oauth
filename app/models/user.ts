@@ -21,7 +21,16 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare correo: string
 
   @column({ serializeAs: null })
-  declare contrasena: string
+  declare contrasena: string | null
+
+  @column()
+  declare googleId: string | null
+
+  @column()
+  declare avatar: string | null
+
+  @column()
+  declare provider: 'local' | 'google' | null
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

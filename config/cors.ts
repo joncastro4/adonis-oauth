@@ -10,7 +10,7 @@ import env from '#start/env'
 const corsConfig = defineConfig({
   enabled: true,
   //origin: true,
-  origin: env.get('CORS_ORIGIN', ['http://localhost:4200',]),
+  origin: env.get('CORS_ORIGIN', ['http://localhost:4200']),
   methods: ['GET', 'HEAD', 'POST', 'PUT', 'DELETE'],
   headers: true,
   exposeHeaders: [],
